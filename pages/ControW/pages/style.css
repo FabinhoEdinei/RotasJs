@@ -6,11 +6,11 @@
 
 .box div {
  
-  border: outset 8px #000;
+  border: outset 8px rgb(54, 16, 16);
   border-radius:5px;
   box-shadow:  -16px  16px  32px #000;
   display: flex;
-  background: rgb(228, 176, 176);
+  background: url('../../globo_icon.svg');
   width:800px;
   height:300px;
 }
