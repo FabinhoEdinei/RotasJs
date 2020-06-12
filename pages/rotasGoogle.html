@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head> 
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    	<title>Procurador de endereço</title>
+	<style>
+		body {
+			background-color: CornflowerBlue;
+			color: white;
+			font-size: 1.3em;
+		}
+
+		label {
+			margin-bottom: 10px;			
+		}
+
+		#box {
+			margin-bottom: 25px;
+			width: 70%;
+			font-size: 1.3em;
+			padding: 5px;
+		}
+
+		#adicionaRota {
+			margin-top: 15px;
+			padding: 10px;
+			margin-bottom:15px;
+			width: 50%;
+			background: #f0f0f5;
+			border-radius: 6px;
+
+		}
+
+		#btRota {
+			padding: 10px;
+			width: 25%;
+			background: rgb(176, 206, 119);
+			border-radius:6px;
+		}
+
+		#btComparte {
+			display: none;
+			background: yellow;
+		}
+		
+		#lista {
+			margin: 25px 10%;
+			background: #ffe6e6;
+			padding: 15px;
+			display: block;
+			color: #312c29;
+			 border-radius:6px;
+		}	
+
+		.amarelo {color: rgb(206, 25, 25);}
+	</style>
+</head>
+
+<body>
+	<a href="../index.html"><img src="./send.svg"> Voltar pra home</a>
+	<center>
+		<h1 class="amarelo">PESQUISAR ROTA!</h1>
+
+		<label>Digite o(s) ENDEREÇO(S) que vai ser direcionado direto ao seu destino via googles/maps</label><br><br>
+		<input id="box" type="text"><br>
+
+		<button id="adicionaRota" onclick="formaArray()"><strong>
+      <img src="search.svg" style="justify-content:left">Adicionar mais endereços</strong></button><br><br>
+		
+		<button id="btComparte" onclick="compartilha()">COMPARTILHA AO MOTORISTA</button>
+		<div id="mapa"></div>
+	</center>
+
+	<div id="lista">
+		<strong>Endereço de origem:</strong><br>
+
+    484 R. Ivo Remo Comanduli
+    Caxias do Sul, Rio Grande do Sul
+		<hr>
+	</div>
+	
+	<center>
+		<button id="btRota" onclick="rota()"><strong>MOSTRAR ROTA NO MAPA</strong></button>
+	</center>
+<script>
+
+var items = [];
+
+	function formaArray() {
+		box = document.getElementById('box').value;
+		boxvalue = box.replace(/,/g , "-")
+		items.push(boxvalue)
+		document.getElementById('box').value = ""
+		document.getElementById("lista").innerHTML += box + "<br>"
+		console.log(items)
+	}
+
+	function rota() {
+		// O formato url deve ser: https://www.google.com.br/maps/dir/Av.+Rio+dos+Sinos,+925+-+Harmonia,+Canoas+-+RS,+/R.+Dr.+Barcelos,+200+Porto+Alegre+-+RS/R.+Dr.+Barcelos,+200+-+Centro,+Canoas+-+RS,+/Mercado+Publico+de+Porto+Alegre+-+Centro+Historico,+Porto+Alegre+-+RS
+
+		destino = items.toString()
+		destino = destino.replace(/ /g, "+").replace(/,/g , ",+/")
+
+		// Abaixo: já sai com a origem daqui do depósito:
+		endereco = `https://www.google.com.br/maps/dir/Av.+Nome+da+Avenida,+100+-+Bairro,+Cidade+-+UF/${destino}`
+		c = document.getElementById("btComparte")
+		
+		// c.style.display = "block"
+		window.open(endereco)
+
+		//url = endereco.replace(/\+/g , "-")
+		
+		//document.getElementById("mapa").innerHTML = `<iframe src="${url}" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>`
+
+	}
+
+	function compartilha() {
+		window.open(`https://api.whatsapp.com/send?phone=+5211952527695&text=${endereco}`)
+//		window.location = `https://api.whatsapp.com/send?text=${endereco}`
+	}
+
+
+	function mostraMapa() {
+	
+}
+
+
+
+</script>
+
+</body>
+</html>

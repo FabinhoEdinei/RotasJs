@@ -1,0 +1,17 @@
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box div {
+  width: 100px;
+  height: 100px;
+}
+.box div.header{
+  border: solid 3px #000;
+  display: flex;
+  background-attachment: rgb(149, 40, 40);
+  width:800px;
+  height:30px;
+}

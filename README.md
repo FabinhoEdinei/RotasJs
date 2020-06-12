@@ -1,2 +1,0 @@
-# RotasJs
-Created with CodeSandbox

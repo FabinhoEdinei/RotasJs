@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Micro route js</title>
+    <base href= "/">
+    <style>
+      body {
+        background:#fff;
+        color:#666;
+        font-size: 1.1em;
+      }
+      a {
+        color:#444;
+        text-decoration: none;
+        text-shadow: -1px -1px -1px rgba(0,0,0,0.1);
+      }
+      a:hover{
+        color:black;
+        }
+      h1 a {
+        display: inline-block;
+        color: #FC0E49;
+      }
+      .limiter {
+        margin: 0 auto;
+        max-width: 600px;
+        text-align: center;
+        border: solid 2px #000;
+        box-shadow: -5px 10px 10px #000;
+border-radius: 8px;
+      }
+      ul li {
+        display: inline-block;
+        margin: 0 10px;
+      }
+      .display{
+        margin: 20px auto;
+        padding:20px;
+        border-radius: 10px;
+        border: solid 1px #eee;
+      }
+      </style>
+  </head>
+  <body>
+    <div class="limiter">
+    <h1> <a href="./pages/ControW/home.html" src="../ControW/pages/home.html">Home</a><h1>
+
+      <ul>
+       
+        
+<li> <a href="./pages/perfil.html">Perfil</a> </li>
+<li> <a href="./pages/rotasGoogle.html"> Google Maps</a> </li>
+<li> <a href="./pages/ControW/pages/LayerDate.html">Posts</a> </li>
+<li> <a href="./not-found">Not Found</a> </li>
+      </ul>
+      <div class="display"></div></div>
+      <script src="/micror.js"></script>
+      <script>
+        var display = document.querySelector('.display');
+        micror('/', function(ctx){
+          display.textContent = 'Rota Home';
+        });
+        micror('/perfil', function(ctx){
+        display.textContent = "/perfil.html";
+        });
+        micror('/post/:id', function(ctx){
+        display.textContent = 'Rota post com id = '+ ctx.params.id;
+        });
+
+        micror('/posts/:page/:order?', function(ctx){
+        var html = 'Rota Posts com page = ' + ctx.params.page;
+        html += ' e order = ' + ctx.params.order || '';
+        display.textContent = html;
+        });
+
+        micror('*', function(ctx){
+        display.textContet = 'PAGE NOT FOUND';
+        });
+
+        micror.run();
+        // event listenner para o links
+
+        var links = document.querySelectorAll('a');
+        var len = links.length;
+        while( len-- ) {
+      links[len].addEventListener('click', function(event) {
+        var element = event.target;
+        var path = element.pathname + element.search + (element.hash || '');
+        micror.go(path);
+        event.preventDefault();
+      });
+
+
+}
+        </script>
+  </body>
+</html>
