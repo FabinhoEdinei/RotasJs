@@ -1,0 +1,3 @@
+# RotasJs
+Created with CodeSandbox
+varias pagina interligadas um pequeno estudo de rotas de tudo um pouco, com o editor do CodeSanbox ... 
