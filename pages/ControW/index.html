@@ -5,18 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>LayerDate</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+    <style>
+      body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+header {
+  flex: 0 0 100px;
+  background-color: #C14F4F;
+}
+main {
+  flex: 1;
+  display: flex;
+  background-color: #699EBD;
+}
+footer {
+  flex: 0 0 40px;
+  background-color: #C14F4F;
+}
+.left, .right {
+  flex: 0 2 150px;
+  background-color: #C28282;
+}
+.middle {
+  flex:1 1 300px;
+}
+      </style>
   </head>
   <body>
-      <div class="box"> 
-          <h1 class="header">ola</h1>
-            <div>
-              <h1>deu certo</h1>
-              <p>ou deu errado totalmente?</p>
-              <p>2 ajustar o layout(em desemvolvimento)</p>
-              </div>
-              <a href="../../index.html"><img src="../send.svg"> Voltar pra home</a>
+      <header></header>
+      <main>
+        <div class="left"></div>
+        <div class="middle"></div>
+        <div class="right"></div>
+      </main>
+      <footer>
+        <a href="../../index.html"><img src="../send.svg"> Voltar pra home</a>
+
+      </footer>
           </div>
           <script src="index.js/script>
   </body>
