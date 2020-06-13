@@ -22,3 +22,17 @@
   width:800px;
   height:50px
 }
+
+	.butRetaner{
+  border: solid 1px #000;
+  width: 190px;
+  margin-top: 6px;
+  margin-left: 40px;
+  border-radius:5px;
+  box-shadow: 5px 10px 15px #000;
+  background: #ffe6e6;
+      }
+      .butRetaner a {
+        text-decoration:none;
+  
+      }
