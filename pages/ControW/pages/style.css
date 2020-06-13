@@ -6,8 +6,7 @@ background: rgba(60, 109, 112, 0.719);
   align-items: center;
   justify-content: center;
   position: sticky;
-  top: 10px;
-  left: 30px;
+
 }
 
 .box div {
@@ -17,16 +16,17 @@ background: rgba(60, 109, 112, 0.719);
   box-shadow:  -16px  16px  32px #000;
   display: flex;
   background: url('../../globo_icon.svg')no-repeat;
+  text-align: center;
  
   width:800px;
   height:300px;
 }
 .boxTwo div{
 
-  border: solid 3px #000;
+  border: solid 3px rgb(49, 21, 21);
   display: flex;
   background: rgb(149, 40, 40);
-  width:800px;
+  width:600px;
   height:100px
 }
 
@@ -36,7 +36,7 @@ background: rgba(60, 109, 112, 0.719);
   margin-top: 16px;
   margin-left: 90px;
   border-radius:5px;
-  box-shadow: 5px 10px 15px #000;
+  box-shadow: -10px 5px 20px rgb(19, 49, 5);
   background: #ffe6e6;
       }
       .butRetaner a {
