@@ -28,8 +28,8 @@ box-shadow: 10px 20px 15px #000;
 border-radius: 5px;
   background-color: #162941;
 padding-left: 30px;
-
-}	.butRetaner{
+}	
+.butRetaner{
   border: solid 1px #000;
   width: 190px;
   border-radius:5px;
@@ -37,7 +37,6 @@ padding-left: 30px;
   background: #ffe6e6;
       }
       .butRetaner a {
-        text-decoration:none;
-      
+        text-decoration:none;    
   
       }

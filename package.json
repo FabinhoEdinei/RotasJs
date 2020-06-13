@@ -1,7 +1,7 @@
 {
   "name": "rotas",
   "version": "1.0.0",
-  "description": "Rotas com javascritp ",
+  "description": "Rotas com javascript ",
   "main": "index.html",
   "scripts": {
     "start": "serve",
