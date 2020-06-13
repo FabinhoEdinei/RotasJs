@@ -1,16 +1,23 @@
+body {
+background: rgba(60, 109, 112, 0.719);
+}
 .box {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: sticky;
+  top: 10px;
+  left: 30px;
 }
 
 .box div {
  
-  border: outset 8px rgb(54, 16, 16);
+  border: outset 8px rgba(60, 153, 51, 0.801);
   border-radius:5px;
   box-shadow:  -16px  16px  32px #000;
   display: flex;
-  background: url('../../globo_icon.svg');
+  background: url('../../globo_icon.svg')no-repeat;
+ 
   width:800px;
   height:300px;
 }
@@ -20,5 +27,31 @@
   display: flex;
   background: rgb(149, 40, 40);
   width:800px;
-  height:50px
+  height:100px
+}
+
+	.butRetaner{
+  border: solid 1px #000;
+  width: 190px;
+  margin-top: 16px;
+  margin-left: 90px;
+  border-radius:5px;
+  box-shadow: 5px 10px 15px #000;
+  background: #ffe6e6;
+      }
+      .butRetaner a {
+        text-decoration:none;  
+      }
+.header h3{
+ justify-content: center;
+}
+dt {
+
+  color: rgba(36, 102, 45, 0.746);
+  padding: 2px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  margin: 1em 0;
+  text-align: center;
 }
