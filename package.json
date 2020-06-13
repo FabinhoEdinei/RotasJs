@@ -1,7 +1,7 @@
 {
-  "name": "rotas-js-2-atualizado",
+  "name": "rotas",
   "version": "1.0.0",
-  "description": "",
+  "description": "Rotas com javascritp ",
   "main": "index.html",
   "scripts": {
     "start": "serve",
