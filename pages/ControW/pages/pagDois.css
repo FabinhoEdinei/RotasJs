@@ -1,0 +1,8 @@
+#main{
+display:flex;
+background:rgb(56, 41, 41);
+border: outset 5px rgb(68, 107, 24);
+border-radius: 8px;
+padding: 5px;
+flex-direction: row-reverse;
+}
