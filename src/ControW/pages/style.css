@@ -39,13 +39,18 @@ background: rgba(60, 109, 112, 0.719);
   margin-left: 90px;
   border-radius:5px;
   box-shadow: -10px 5px 20px rgb(19, 49, 5);
-  background: #ffe6e6;
+  background: #eecece;
       }
       .butRetaner a {
         text-decoration:none;  
       }
 .header h3{
  justify-content: center;
+}
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
 }
 dt {
 
