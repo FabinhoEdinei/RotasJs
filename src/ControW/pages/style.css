@@ -1,0 +1,59 @@
+body {
+background: rgba(60, 109, 112, 0.719);
+}
+.box {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+
+}
+
+.box div {
+ 
+  border: outset 8px rgba(60, 153, 51, 0.801);
+  border-radius:5px;
+  box-shadow:  -16px  16px  32px #000;
+  display: flex;
+  background: url('../../globo_icon.svg')no-repeat;
+  text-align: center;
+
+ 
+  width:800px;
+  height:300px;
+}
+.boxTwo div{
+
+  border: solid 3px rgb(49, 21, 21);
+  display: flex;
+  background: rgb(149, 40, 40);
+  width:600px;
+  height:100px
+}
+
+	.butRetaner{
+  border: solid 1px #000;
+  width: 190px;
+  margin-top: 16px;
+  margin-left: 90px;
+  border-radius:5px;
+  box-shadow: -10px 5px 20px rgb(19, 49, 5);
+  background: #ffe6e6;
+      }
+      .butRetaner a {
+        text-decoration:none;  
+      }
+.header h3{
+ justify-content: center;
+}
+dt {
+
+  color: rgba(36, 102, 45, 0.746);
+  padding: 2px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  margin: 1em 0;
+  text-align: center;
+}

@@ -8,7 +8,7 @@
     <base href= "/">
     <style>
       body {
-        background-image: url("./pages/globo_icon.svg");
+        background-image: url("./src/img/globo_icon.svg");
         background-repeat: no-repeat, repeat;
         background-color:#1f4720;
         background-size:400px 400px;
@@ -46,7 +46,7 @@ border-radius: 8px;
       .display{
         margin: 20px auto;
         padding:20px;
-        background: url('../pages/globo_icon.svg')no-repeat;
+        background: url('../src/img/globo_icon.svg')no-repeat;
         background-position: right;
         border-radius: 10px;
         border: solid 1px #eee;
@@ -55,18 +55,19 @@ border-radius: 8px;
   </head>
   <body>
     <div class="limiter">
-    <h1> <a href="./pages/ControW/home.html" src="../ControW/pages/home.html">Home</a><h1>
+    <h1> <a href="./src/ControW/pages/LayerDate.html" src="../ControW/pages/home.html">Home</a><h1>
 
       <ul>
        
         
-<li> <a href="./pages/perfil.html">Perfil</a> </li>
-<li> <a href="./pages/rotasGoogle.html"> Google Maps</a> </li>
-<li> <a href="./pages/ControW/pages/LayerDate.html">Posts</a> </li>
-<li> <a href="./pages/pages/Notfound.html">Not Found</a> </li>
+<li> <a href="./src/perfil.html">Perfil</a> </li>
+<li> <a href="./src/rotasGoogle.html"> Google Maps</a> </li>
+<li> <a href="./src/ControW/pages/LayerDate.html">Posts</a> </li>
+<li> <a href="./src/pages/Notfound.html">Not Found</a> </li>
       </ul>
       <div class="display">em desemvolvimento!</div>Bem Vindo </div>
       <script src="/micror.js"></script>
+
       <script>
         var display = document.querySelector('.display');
         micror('/', function(ctx){
@@ -95,7 +96,7 @@ border-radius: 8px;
         var links = document.querySelectorAll('a');
         var len = links.length;
         while( len-- ) {
-      links[len].addEventListener('click', function(event) {
+        links[len].addEventListener('click', function(event) {
         var element = event.target;
         var path = element.pathname + element.search + (element.hash || '');
         micror.go(path);
