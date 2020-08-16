@@ -80,7 +80,8 @@ function fillParams(match, keys, params) {
 }
 
 function regexp(path, keys) {
-  var regex = path.replace(/\/(:?)([^\/?]+)(\??)(?=\/|$)/g, function(
+  var regex = path.replace(/\/(:?)([^\/?]+)(\??)(?=\/|$)/g, 
+  function(
     match,
     isVariable,
     segment,
